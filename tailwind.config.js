@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/**/*.js", "./components/**/*.js"],
+  content: ["./pages/**/*.js", "./components/**/*.js", "./layout/**/*.js"],
 
   theme: {
     spacing: {
@@ -65,6 +65,12 @@ module.exports = {
       tablet: { max: "1023px" },
       phablet: { max: "767px" },
       mobile: { max: "480px" },
+    },
+    colors: {
+      white: "#ffffff",
+      gray: "#ececec",
+      primary: "",
+      secondary: "red",
     },
     extend: {},
   },
