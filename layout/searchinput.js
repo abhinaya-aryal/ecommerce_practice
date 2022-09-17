@@ -21,8 +21,10 @@ const SearchInput = () => {
             className={` w-4 p-0.4 h-full bg-secondary text-white cursor-pointer`}
           />
         </div>
-        <Link href={"/my-cart"} passHref>
-          <BsCart className={`text-2.4 cursor-pointer`} />
+        <Link href={"/my-cart"}>
+          <div>
+            <BsCart className={`text-2.4 cursor-pointer`} />
+          </div>
         </Link>
       </div>
     </>

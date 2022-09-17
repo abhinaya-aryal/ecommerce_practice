@@ -1,28 +1,29 @@
 // $ thin topbar nav elements
 
 const TopBarData = [
+  { id: 1, name: "MADE IN NEPAL", path: "/made-in-nepal" },
   {
-    id: 1,
+    id: 2,
     name: "BEST DEAL",
     path: "/best-deal",
   },
   {
-    id: 2,
+    id: 3,
     name: "CUSTOMER CARE",
     path: "/customer-care",
   },
   {
-    id: 3,
+    id: 4,
     name: "TRACK MY ORDER",
     path: "/track-my-order",
   },
   {
-    id: 4,
+    id: 5,
     name: "LOGIN",
     path: "/login",
   },
   {
-    id: 5,
+    id: 6,
     name: "SIGN UP",
     path: "/sign-up",
   },

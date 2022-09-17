@@ -1,6 +1,6 @@
 // % searchbar with logo, search box and categories
 
-import Category from "./category";
+import Category from "./categoryblock";
 import Logo from "./logo";
 import SearchInput from "./searchinput";
 
