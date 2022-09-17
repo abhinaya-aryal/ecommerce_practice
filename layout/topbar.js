@@ -1,3 +1,5 @@
+// $ thin navbar at the top of an app
+
 import TopBarData from "../data/topbardata";
 import Link from "next/link";
 

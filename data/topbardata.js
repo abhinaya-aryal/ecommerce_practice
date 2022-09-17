@@ -1,3 +1,5 @@
+// $ thin topbar nav elements
+
 const TopBarData = [
   {
     id: 1,

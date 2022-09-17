@@ -1,3 +1,5 @@
+// # logo in searchbar only
+
 import Link from "next/link";
 
 const Logo = () => {

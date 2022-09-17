@@ -8,7 +8,13 @@ const Home = () => {
       <Head>
         <title>HamroPasal Home</title>
       </Head>
-      <Image src={img} alt="image" sizes={"50vw"} className={`h-36 w-full`} />
+      <Image
+        src={img}
+        alt="image"
+        sizes={"50vw"}
+        className={`h-36 w-full`}
+        placeholder="blur"
+      />
     </>
   );
 };
