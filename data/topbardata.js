@@ -1,4 +1,4 @@
-// $ thin topbar nav elements
+// $ imported from "/layout/topbar.js"
 
 const TopBarData = [
   { id: 1, name: "MADE IN NEPAL", path: "/made-in-nepal" },

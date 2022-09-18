@@ -1,4 +1,4 @@
-// $ thin navbar at the top of an app
+// $ imported form "/layout/index.js"
 
 import TopBarData from "../data/topbardata";
 import Link from "next/link";

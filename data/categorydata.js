@@ -1,4 +1,4 @@
-// # category data for whole app
+// # imported from "/layout/categoryblock.js"
 
 const CategoryData = [
   {

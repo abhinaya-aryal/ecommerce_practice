@@ -1,4 +1,4 @@
-// ! searchbar input box and cart
+// ! imported from "/layout/searchbar.js"
 
 import { FaSearch } from "react-icons/fa";
 import { BsCart } from "react-icons/bs";

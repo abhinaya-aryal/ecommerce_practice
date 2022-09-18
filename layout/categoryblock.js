@@ -1,75 +1,74 @@
-// @ category for searchbar
+// $ imported from "/layout/category.js"
 
-import CategoryData from "../data/categorydata";
-import Link from "next/link";
 import { FaChevronLeft } from "react-icons/fa";
+import CategoryData from "../data/categorydata";
 import { useState } from "react";
-import CategoryTitle from "./categotytitle";
+import Link from "next/link";
 
 const CategoryBlock = () => {
   const [state, setState] = useState({
-    isActive: false,
-    activeIndex: "",
+    isHovered: false,
+    index: null,
   });
 
   return (
     <>
-      <div className="relative h-4">
-        <CategoryTitle isActive={state.isActive} />
-        <div
-          className="absolute border border-gray z-20 bg-white top-full right-0 w-24 text-1.4 py-1 hidden peer-hover:block  hover:block"
-          onMouseLeave={() => {
-            setState({
-              isActive: false,
-              activeIndex: "",
-            });
-          }}
-        >
-          <div className="relative">
-            <div>
-              {CategoryData.map((items, i) => {
-                return (
-                  <div
-                    onMouseEnter={() => {
-                      setState({
-                        isActive: true,
-                        activeIndex: i,
-                      });
-                    }}
-                    key={items.id}
-                    className={`pl-0.4 pr-1.2 py-0.4 flex items-center cursor-pointer ${
-                      state.activeIndex === i
-                        ? "bg-gray justify-between text-secondary"
-                        : "justify-end"
+      <div
+        className={`absolute top-full right-0 text-1.6 hidden hover:block peer-hover:block`}
+        onMouseLeave={() => {
+          setState({ isHovered: false, index: null });
+        }}
+      >
+        <div className="relative">
+          <div
+            className={`w-24 bg-white border border-gray h-max shadow-lg`}
+            onMouseOver={(event) => {
+              if (event.target.attributes["data-index"]?.value) {
+                setState({
+                  index: Number(event.target.attributes["data-index"].value),
+                  isHovered: true,
+                });
+              }
+            }}
+          >
+            {CategoryData.map((item, i) => {
+              return (
+                <div
+                  data-index={String(i)}
+                  className={`flex  items-center pl-0 py-0.4 pr-1 hover:bg-gray hover:text-secondary cursor-pointer ${
+                    state.isHovered && state.index === i
+                      ? "bg-gray text-secondary justify-between"
+                      : "justify-end"
+                  }`}
+                  key={item.id}
+                >
+                  <FaChevronLeft
+                    className={`${
+                      state.isHovered && state.index === i ? "block" : "hidden"
                     }`}
-                  >
-                    <FaChevronLeft
-                      className={` ${
-                        state.activeIndex === i ? "block" : "hidden"
-                      }`}
-                    />
-                    <div className="text-1.6">{items.name}</div>
-                  </div>
+                  />
+                  <div>{item.name}</div>
+                </div>
+              );
+            })}
+          </div>
+          {state.isHovered && (
+            <div
+              className={`absolute top-0 right-full w-full h-full bg-white border border-gray shadow-lg ${
+                state.isHovered ? "block" : "hidden"
+              }`}
+            >
+              {CategoryData[state.index].categories.map((each, i) => {
+                return (
+                  <Link key={i} href={each.path}>
+                    <div className="text-right pl-0 py-0.4 pr-1 hover:bg-gray hover:text-secondary cursor-pointer">
+                      {each.name}
+                    </div>
+                  </Link>
                 );
               })}
             </div>
-
-            {state.isActive && (
-              <div
-                className={`absolute hover:block h-full w-full top-0 text-1.4 border border-gray z-20 right-full bg-white py-1 `}
-              >
-                {CategoryData[state.activeIndex].categories.map((item) => {
-                  return (
-                    <Link href={item.path} passHref key={item.name}>
-                      <div className="text-1.6 pr-1.2 py-0.4 hover:bg-gray hover:text-secondary text-right cursor-pointer">
-                        {item.name}
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
-            )}
-          </div>
+          )}
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-// ! the complete root layout of an app
+// ! imported from "/pages/_app.js"
 
 import Footer from "./footer";
 import SearchBar from "./searchbar";

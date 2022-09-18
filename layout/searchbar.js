@@ -1,6 +1,7 @@
-// % searchbar with logo, search box and categories
+// % imported from "/layout/index.js"
 
-import Category from "./categoryblock";
+import Category from "./category";
+
 import Logo from "./logo";
 import SearchInput from "./searchinput";
 

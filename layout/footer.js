@@ -1,4 +1,4 @@
-// @ footer of an whole app
+// @ imported from "/layout/index.js"
 
 const Footer = () => {
   return (

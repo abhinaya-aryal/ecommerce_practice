@@ -1,4 +1,4 @@
-// # logo in searchbar only
+// # imported from "/layout/searchbar.js"
 
 import Link from "next/link";
 
