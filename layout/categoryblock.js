@@ -21,11 +21,12 @@ const CategoryBlock = () => {
       >
         <div className="relative">
           <div
-            className={`w-24 bg-white border border-gray h-max shadow-lg`}
+            className={`w-22.4 py-0.6 bg-white border border-gray h-max shadow-lg`}
             onMouseOver={(event) => {
               if (event.target.attributes["data-index"]?.value) {
                 setState({
-                  index: Number(event.target.attributes["data-index"].value),
+                  index:
+                    Number(event.target.attributes["data-index"].value) ?? null,
                   isHovered: true,
                 });
               }
@@ -54,11 +55,11 @@ const CategoryBlock = () => {
           </div>
           {state.isHovered && (
             <div
-              className={`absolute top-0 right-full w-full h-full bg-white border border-gray shadow-lg ${
+              className={`absolute top-0 right-full w-full h-full py-0.6 bg-white border border-gray shadow-lg ${
                 state.isHovered ? "block" : "hidden"
               }`}
             >
-              {CategoryData[state.index].categories.map((each, i) => {
+              {CategoryData[state.index]?.categories.map((each, i) => {
                 return (
                   <Link key={i} href={each.path}>
                     <div className="text-right pl-0 py-0.4 pr-1 hover:bg-gray hover:text-secondary cursor-pointer">

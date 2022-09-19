@@ -1,13 +1,13 @@
 // $ imported form "/layout/index.js"
 
-import TopBarData from "../data/topbardata";
 import Link from "next/link";
+import TopBarData from "../data/topbardata";
 
 const Topbar = () => {
   return (
     <>
       <div
-        className={`bg-gray w-full flex space-x-3.2 justify-end py-0.4 px-9.6 z-50`}
+        className={`bg-gray w-full flex space-x-3.2 justify-end py-0.4 px-9.6`}
       >
         {TopBarData.map((item) => {
           return (

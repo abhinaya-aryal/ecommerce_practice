@@ -70,6 +70,7 @@ module.exports = {
       white: "#ffffff",
       gray: "#ececec",
       black: "#000000",
+      transparent: "transparent",
       primary: "",
       secondary: "#fb4c11",
     },
