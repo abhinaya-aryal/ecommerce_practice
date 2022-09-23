@@ -1,7 +1,7 @@
 // ! imported from "/layout/searchbar.js"
 
 import { FaSearch } from "react-icons/fa";
-import { BsCart } from "react-icons/bs";
+import { BsCart2 } from "react-icons/bs";
 import Link from "next/link";
 
 const SearchInput = () => {
@@ -14,7 +14,7 @@ const SearchInput = () => {
             name="search"
             id="search"
             className={`text-1.6 px-0.4 h-full w-36 bg-gray outline-none`}
-            placeholder="Search in hamropasal"
+            placeholder="Search in Logo"
             autoFocus={true}
           />
           <FaSearch
@@ -22,9 +22,11 @@ const SearchInput = () => {
           />
         </div>
         <Link href={"/my-cart"}>
-          <div>
-            <BsCart className={`text-2.4 cursor-pointer`} />
-          </div>
+          <a>
+            <BsCart2
+              className={`text-2.4 hover:text-secondary cursor-pointer`}
+            />
+          </a>
         </Link>
       </div>
     </>

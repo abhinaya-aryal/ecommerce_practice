@@ -26,7 +26,7 @@ const CategoryBlock = () => {
               if (event.target.attributes["data-index"]?.value) {
                 setState({
                   index:
-                    Number(event.target.attributes["data-index"].value) ?? null,
+                    Number(event.target.attributes["data-index"].value) ?? 0,
                   isHovered: true,
                 });
               }
@@ -55,16 +55,14 @@ const CategoryBlock = () => {
           </div>
           {state.isHovered && (
             <div
-              className={`absolute top-0 right-full w-full h-full py-0.6 bg-white border border-gray shadow-lg ${
-                state.isHovered ? "block" : "hidden"
-              }`}
+              className={`absolute top-0 right-full w-full h-full py-0.6 bg-white border border-gray shadow-lg `}
             >
-              {CategoryData[state.index]?.categories.map((each, i) => {
+              {CategoryData[state?.index].categories.map((each, i) => {
                 return (
                   <Link key={i} href={each.path}>
-                    <div className="text-right pl-0 py-0.4 pr-1 hover:bg-gray hover:text-secondary cursor-pointer">
+                    <a className="text-right w-full block pl-0 py-0.4 pr-1 hover:bg-gray hover:text-secondary cursor-pointer">
                       {each.name}
-                    </div>
+                    </a>
                   </Link>
                 );
               })}

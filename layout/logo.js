@@ -6,10 +6,12 @@ const Logo = () => {
   return (
     <>
       <Link href={"/"} passHref>
-        <span className={`text-2.8 cursor-pointer font-semibold`}>
-          hamro
-          <span className={`text-secondary`}>Pasal</span>
-        </span>
+        <a>
+          <span className={`text-2.8 cursor-pointer font-semibold`}>
+            Lo
+            <span className={`text-secondary`}>Go</span>
+          </span>
+        </a>
       </Link>
     </>
   );

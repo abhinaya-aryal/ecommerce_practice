@@ -17,7 +17,7 @@ const Images = () => {
           return prevState + 1;
         });
       }
-    }, 4000);
+    }, 5000);
 
     return () => {
       clearInterval(timer);
@@ -28,15 +28,18 @@ const Images = () => {
     <>
       <div className="h-36 w-full relative cursor-pointer">
         <Link href={HomeImageData[state]?.path}>
-          <div className="h-full w-full relative">
-            <Image
-              src={HomeImageData[state]?.src}
-              alt="image"
-              sizes={"50vw"}
-              fill
-              placeholder={"blur"}
-            />
-          </div>
+          <a>
+            <div className="h-full w-full relative">
+              <Image
+                src={HomeImageData[state]?.src}
+                alt="image"
+                sizes={"50vw"}
+                fill
+                placeholder={"blur"}
+                priority
+              />
+            </div>
+          </a>
         </Link>
         <div
           className="absolute bottom-0.4 py-0.4 left-0 h-max w-full  flex justify-center items-center space-x-0.4"
@@ -56,7 +59,7 @@ const Images = () => {
               <div
                 key={index}
                 data-index={String(index)}
-                className={`w-1 h-1 shadow-lg bg-white rounded-full hover:bg-gray ${
+                className={`w-1 h-1 shadow-lg bg-white rounded-full transition-all duration-500 hover:bg-gray ${
                   state === index ? "bg-gray  scale-125" : "bg-white"
                 }`}
               ></div>

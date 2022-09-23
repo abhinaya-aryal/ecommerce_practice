@@ -5,3 +5,8 @@
 html {
   font-size: 62.5% !important;
 }
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}

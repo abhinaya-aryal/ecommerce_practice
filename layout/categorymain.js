@@ -1,12 +1,15 @@
-import Category from "./category";
+// @ imported from "/layout/searchbar.js"
+
+import CategoryTitle from "./categorytitle";
+import CategoryBlock from "./categoryblock";
 
 const CategoryMain = () => {
   return (
     <>
-      <div
-        className={`absolute top-full right-0 text-1.6 hidden hover:block peer-hover:block`}
-      >
-        <div className="relative">{/* <Category /> */}
+      <div className="relative h-4">
+        <CategoryTitle />
+        <CategoryBlock />
+      </div>
     </>
   );
 };

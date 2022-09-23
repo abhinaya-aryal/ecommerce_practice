@@ -7,12 +7,12 @@ import Topbar from "./topbar";
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="sticky top-0 z-50">
+      <div className="sticky top-0 z-50 shadow-md">
         <Topbar />
         <SearchBar />
       </div>
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
