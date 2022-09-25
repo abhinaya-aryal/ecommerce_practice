@@ -11,6 +11,7 @@ const HomePage = ({ data }) => {
       <div className="bg-gray px-12.8 h-max w-full">
         <GifImage />
         <FlashSale data={data} />
+        <div className="h-screen"></div>
       </div>
     </>
   );
