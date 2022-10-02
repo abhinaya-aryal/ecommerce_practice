@@ -19,9 +19,11 @@ const ProductCard = () => {
             className={`object-cover`}
           ></Image>
         </div>
-        <div className=" p-0.8 text-1.6">
-          <div className={`leading-7`}>Est sed ipsum quaejkml mollitia.</div>
-          <div className="text-secondary my-0.8">Rs.997</div>
+        <div className=" p-0.8 ">
+          <div className={`leading-7 text-1.6`}>
+            Est sed ipsum quaejkml mollitia.
+          </div>
+          <div className="text-secondary my-0.6 text-2">Rs.997</div>
           <div className="flex flex-row text-1.2">
             <div className="line-through">Rs.1500</div>
             <div className={`ml-1`}>-33%</div>

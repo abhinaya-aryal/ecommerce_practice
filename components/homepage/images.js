@@ -1,4 +1,4 @@
-// # imported from "/components/pages/index.js"
+// # imported from "/components/homepage/index.js"
 
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
