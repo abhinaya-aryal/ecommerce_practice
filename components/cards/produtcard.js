@@ -13,7 +13,7 @@ const ProductCard = () => {
       >
         <div className="h-17.6  relative">
           <Image
-            src={`http://placeimg.com/640/480/mobile`}
+            src={`https://picsum.photos/640/480`}
             alt={`img`}
             fill
             className={`object-cover`}

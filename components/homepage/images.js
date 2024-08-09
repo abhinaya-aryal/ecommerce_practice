@@ -26,7 +26,7 @@ const Images = () => {
 
   return (
     <>
-      <div className="h-36 w-full relative cursor-pointer">
+      <div className="h-38.4 w-full relative cursor-pointer">
         <Link href={HomeImageData[state]?.path}>
           <a>
             <div className="h-full w-full relative">
